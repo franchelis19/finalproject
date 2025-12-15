@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francis Gym | Creativity</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">CF</div>
+        <div>
+          <h1 class="brand-title">Francis Gym</h1>
+          <p class="brand-subtitle">Creativity Page</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">About Us</a>
+        <a class="nav-link" href="register.html">Membership</a>
+        <a class="nav-link active" href="creativity.html">Creativity</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card glow">
+      <h2 class="hero-title" style="margin:0 0 6px 0;">Workout of the Day Generator</h2>
+      <p class="muted">Uses arrays + randomization + DOM updates (interactive feature).</p>
+
+      <div class="actions">
+        <button class="btn" id="btnGenerate">Generate Workout</button>
+        <button class="btn btn-outline" id="btnClear">Clear</button>
+      </div>
+
+      <div id="workoutBox" class="workout-box hidden" aria-live="polite"></div>
+    </section>
+
+    <section class="card">
+      <h3 class="card-title">Goal Tracker (Animated Progress Bar)</h3>
+      <p class="muted">Demonstrates event handling + loops + DOM manipulation.</p>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="goalName">Goal Name</label>
+          <input id="goalName" type="text" placeholder="e.g., 30-minute workout" />
+        </div>
+
+        <div class="field">
+          <label for="goalTarget">Target % (1 - 100)</label>
+          <input id="goalTarget" type="number" placeholder="75" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="btnStart">Start</button>
+        <button class="btn btn-outline" id="btnResetProgress">Reset</button>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-label" id="progressLabel">No goal started yet.</div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Francis Gym (Fictional Project)</p>
+    </div>
+  </footer>
+
+  <script src="js/creativity.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
